@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Codeur / Décodeur Mimoun</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Codeur / Décodeur Mimoun</h1>
+
+  <div class="label-row">
+    <div id="label1">Texte clair</div>
+    <div></div>
+    <div id="label2">Texte codé</div>
+  </div>
+
+  <div class="container">
+    <textarea id="input1" oninput="updateOutput()"></textarea>
+    <button class="switch-btn" onclick="toggleMode()">&#8646;</button>
+    <textarea id="input2" disabled></textarea>
+  </div>
+
+
+  <script src="code.min.js"></script>
+</body>
+</html>
