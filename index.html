@@ -2,25 +2,25 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Codeur / Décodeur Mimoun</title>
+  <title>64R90N</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="container">
+  <h1>64R90N</h1>
 
-  <h1>Codeur / Décodeur Mimoun</h1>
-
-  <div class="label-row">
-    <div id="label1">Texte clair</div>
-    <div></div>
-    <div id="label2">Texte codé</div>
-  </div>
-
-  <div class="container">
-    <textarea id="input1" oninput="updateOutput()"></textarea>
+  <div class="inputs">
+    <div class="label-input">
+        <label for="label1">Texte clair</label>
+        <textarea id="input1" oninput="updateOutput()"></textarea>
+    </div>
     <button class="switch-btn" onclick="toggleMode()">&#8646;</button>
-    <textarea id="input2" disabled></textarea>
-  </div>
-
+    <div class="label-input">
+        <label for="label2">Texte codé</label>
+        <textarea id="input2" disabled></textarea>
+    </div>
+  </div>   
+</div>
 
   <script src="code.min.js"></script>
 </body>
