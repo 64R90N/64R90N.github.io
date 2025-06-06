@@ -69,7 +69,7 @@ textarea:disabled {
 }
 
 /* Tablette : à partir de 600px */
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 767px) {
     .inputs {
       flex-direction: column;
     }
