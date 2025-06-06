@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>64R90N</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>64R90N</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-  <h1>64R90N</h1>
+  <div id="toast" class="toast"></div>
+    
+  <!-- Modale clé secrète -->
+  <div id="keyContainer">
+    <h2>Entrer la clé</h2>
+    <input type="password" id="secretKey" placeholder="Entrez la clé">
+    <button class="validate" onclick="submitKey()">Valider</button>
+    <p id="keyError" style="color:red; display:none;">Clé incorrecte</p>
+  </div>
+  <div id="mainContainer" style="display:none;">
+    <h1>64R90N</h1>
+    <div class="inputs">
+      <div class="label-input">
+        <label id="label1" for="input1">Texte clair</label>
+        <div class="textarea-wrapper">
+          <textarea id="input1"></textarea>
+          <span class="copy-icon" onclick="copyToClipboard('input1')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16"> <path fill="currentColor" d="M4 4.085V10.5a2.5 2.5 0 0 0 2.336 2.495L6.5 13h4.414A1.5 1.5 0 0 1 9.5 14H6a3 3 0 0 1-3-3V5.5a1.5 1.5 0 0 1 1-1.415M11.5 2A1.5 1.5 0 0 1 13 3.5v7a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 5 10.5v-7A1.5 1.5 0 0 1 6.5 2z" /> </svg>
+          </span>
+        </div>
+      </div>
 
-  <div class="inputs">
-    <div class="label-input">
-        <label for="label1">Texte clair</label>
-        <textarea id="input1" oninput="updateOutput()"></textarea>
+      <button class="switch-btn" onclick="toggleMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"> <path fill="none" stroke="currentColor" d="M14 9.5H3l4 3m-5-6h11L9 3" stroke-width="1" /> </svg>
+      </button>
+
+      <div class="label-input">
+        <label id="label2" for="input2">Texte codé</label>
+        <div class="textarea-wrapper">
+          <textarea id="input2" disabled></textarea>
+          <span class="copy-icon" onclick="copyToClipboard('input2')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 16 16"> <path fill="currentColor" d="M4 4.085V10.5a2.5 2.5 0 0 0 2.336 2.495L6.5 13h4.414A1.5 1.5 0 0 1 9.5 14H6a3 3 0 0 1-3-3V5.5a1.5 1.5 0 0 1 1-1.415M11.5 2A1.5 1.5 0 0 1 13 3.5v7a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 5 10.5v-7A1.5 1.5 0 0 1 6.5 2z" /> </svg>
+          </span>
+        </div>
+      </div>
     </div>
-    <button class="switch-btn" onclick="toggleMode()">&#8646;</button>
-    <div class="label-input">
-        <label for="label2">Texte codé</label>
-        <textarea id="input2" disabled></textarea>
+
+    <div class="action-zone">
+      <button class="encode-btn" onclick="handleEncode()">Encoder</button>
     </div>
-  </div>   
-</div>
+  </div>
 
   <script src="code.min.js"></script>
 </body>
