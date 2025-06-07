@@ -18,6 +18,11 @@ body {
     text-align: center;
 }
 
+form#keyForm {
+    display: flex;
+    flex-direction: column;
+}
+
 .validate {
     margin-top: 20px;
     padding: 10px 20px;
