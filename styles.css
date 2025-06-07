@@ -166,53 +166,6 @@ input[type="password"] {
   color: #721c24;
 }
 
-/* Modale clé secrète */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 10001;
-}
-.modal-box {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 10px #0004;
-  min-width: 300px;
-}
-.modal-box input {
-  padding: 10px;
-  width: 90%;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.modal-actions {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-.modal-actions button {
-  padding: 8px 16px;
-  border: none;
-  background: #007BFF;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.modal-actions button:last-child {
-  background: #888;
-}
-
-
 
 
 
